@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Kurs wymiany</h1>
+
+<p *ngIf="rates.length == 0"><em>Ładowanie... Proszę odświeżyć stronę gdy backend ASP.NET zostanie uruchomiony. Zobacz <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> Aby uzyskać więcej szczegółów</em></p>
+
+<table *ngIf="rates">
+    <thead>
+        <tr>
+            <th>Waluta</th>
+            <th>Kod</th>
+            <th>Kurs</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rate of rates">
+            <td>{{ rate.name }}</td>
+            <td>{{ rate.code }}</td>
+            <td>{{ rate.rate }} zł</td>
+            <td>{{ rate.effectiveDate }}</td>
+        </tr>
+    </tbody>
+</table>

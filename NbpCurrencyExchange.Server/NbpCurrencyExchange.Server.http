@@ -1,0 +1,6 @@
+@NbpCurrencyExchange.Server_HostAddress = http://localhost:5159
+
+GET {{NbpCurrencyExchange.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
